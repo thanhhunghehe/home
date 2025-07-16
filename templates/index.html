@@ -15,9 +15,10 @@
          <h3 >chào {{ ten }}!</h3>        
          <h4>mày là một thằng chó</h4>
     {% endif %}<!-- nếu không có biến ten thì không hiển thị -->
-<hr> 
-<h5>địa chỉ nhà mình</h5>
-<form  method="post">
-    <input type email name="email" placeholder="nhập email của bạn", required>
-    <textarea name="message" placeholder="hãy gửi cho mình những lời yêu thương của bạn"></textarea>
+<hr> <!-- ngăn cách giữa hai phần -->
+    <h2>nhập email và lời nhắn của bạn</h2>
+<h5>địa chỉ nhà mình:california,trần dần</h5>
+<form  method="post"><!-- gửi dữ liệu ngầm về flask chạy ẩn trong nền -->
+    <input type email name="email" placeholder="nhập email của bạn", required><!--bắt người dùng nhập đúng email,và hiện chữ mờ,bắt buộc-->
+    <textarea name="message" placeholder="hãy gửi cho mình những lời yêu thương của bạn"></textarea><!-- ô nhập nhiều dòng -->
     <button type="submit">Gửi</button>

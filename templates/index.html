@@ -4,19 +4,40 @@
     <title>ae chí cốt</title>
 </head>
 <body>
-    <h1>CHÀO THẰNG BẠN CHÍ CỐT CỦA TUI</h1> 
+    <h1>CHÀO THẰNG BẠN CHÍ CỐT CỦA TUI</h1> <color:pink></color:pink>
     <p>đây là bộ mặt thật của tao.</p>
      <h2>nhập tên của bạn </h2>
+     <!--FORM BƯỚC 1 NHẬP TÊN-->
+     {% if not ten %}<!-- nếu không có biến ten thì hiển thị --> 
+     <p>hãy nhập tên để mình biết cái mặt chó của bạn</p>
 <form method="post"><!--gửi dữ liệu ngầm về flask chạy ẩn trong nền-->
         <input type="text" name="ten" placeholder="Nhập tên của bạn">
         <button type="submit">Gửi</button> <!-- gửi dữ liệu từ form về flask -->
 </form>
-    {% if ten %}<!-- nếu có biến ten thì hiển thị -->
+  {% endif %}<!-- nếu có biến ten thì không hiển thị -->
+  <!--FORM BƯỚC 2 GỬI LỜI NHẮN CHỈ HIỆN SAU KHI NHẬP TÊN-->
+      {% if ten %}<!-- nếu có biến ten thì hiển thị -->
          <h3 >chào {{ ten }}!</h3>        
          <h4>mày là một thằng chó</h4>
+         <form method="post"></form>
+         <input type ="hidden" name="ten" value="{{ ten }}"> <!-- giữ lại tên đã nhập để gửi đi -->
+         <p>hãy gửi cho mình những lời yêu thương của bạn</p>
+         <label>email:</label><br>
+         <input> type"email" name="email" required><br><br>
+            <label>lời nhắn:</label><br>
+            <textra name="message" rows="4" cols="30" required></textra><br><br>
+            <button type="submit">Gửi</button> <!-- gửi dữ liệu từ form về flask -->
+</form>
     {% endif %}<!-- nếu không có biến ten thì không hiển thị -->
+    {% if email and message %}
+<h5>✅tin nhắn đã gửi</h5>   
+<p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Tin nhắn:</strong> {{ message }}</p>
+    {% endif %}
+</body>
+</html>
 <hr> <!-- ngăn cách giữa hai phần -->
-    <h2>nhập email và lời nhắn của bạn</h2>
+    <h5>nhập email và lời nhắn của bạn</h5>
 <h5>địa chỉ nhà mình:california,trần dần</h5>
 <form  method="post"><!-- gửi dữ liệu ngầm về flask chạy ẩn trong nền -->
     <input type email name="email" placeholder="nhập email của bạn", required><!--bắt người dùng nhập đúng email,và hiện chữ mờ,bắt buộc-->

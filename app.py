@@ -8,4 +8,6 @@ def home():#sẽ gọi hàm home
     # nếu không có giá trị
     return render_template ('index.html', ten=ten)#trả về nội dung của file index.html trong thư mục templates
 if __name__ == '__main__':
-    app.run(debug=True)#giúp dễ kiểm tra lỗi khi chạy ứng dụng
+    import os # kiểm tra nếu biến môi trường FLASK_ENV là 'development'
+    port = int(os.environ.get('PORT', 5000))  # lấy cổng từ biến môi trường hoặc mặc định là 5000
+    app.run(debug=False, host='0.0.0.0', port=port) # chạy ứng dụng Flask với chế độ không gỡ lỗi, lắng nghe trên tất cả các địa chỉ IP và cổng đã chỉ định

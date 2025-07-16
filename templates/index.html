@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TRANG ĐẦU TIÊN</title>
+</head>
+<body>
+    <h1>CHÀO THẰNG L VIẾT CHÓ</h1>
+    <p>đây là bộ mặt thật của tao.</p>
+     <h2>nhập tên của bạn </h2>
+<form method="post"><!--gửi dữ liệu ngầm về flask chạy ẩn trong nền-->
+        <input type="text" name="ten" placeholder="Nhập tên của bạn">
+        <button type="submit">Gửi</button> <!-- gửi dữ liệu từ form về flask -->
+</form>
+    {% if ten %}<!-- nếu có biến ten thì hiển thị -->
+         <h3 >chào {{ ten }}!</h3>        
+         <h4>mày là một thằng chó</h4>
+    {% endif %}<!-- nếu không có biến ten thì không hiển thị -->

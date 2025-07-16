@@ -23,8 +23,8 @@
          <input type ="hidden" name="ten" value="{{ ten }}"> <!-- giữ lại tên đã nhập để gửi đi -->
          <p>hãy gửi cho mình những lời yêu thương của bạn</p>
          <label>email:</label><br>
-         <input> type"email" name="email" required><br><br>
-            <label>lời nhắn:</label><br>
+         <input type="email" name="email" required><br><br>
+            <label>những lời yêu thương của bạn:</label><br>
             <textra name="message" rows="4" cols="30" required></textra><br><br>
             <button type="submit">Gửi</button> <!-- gửi dữ liệu từ form về flask -->
 </form>
@@ -36,10 +36,3 @@
     {% endif %}
 </body>
 </html>
-<hr> <!-- ngăn cách giữa hai phần -->
-    <h5>nhập email và lời nhắn của bạn</h5>
-<h5>địa chỉ nhà mình:california,trần dần</h5>
-<form  method="post"><!-- gửi dữ liệu ngầm về flask chạy ẩn trong nền -->
-    <input type email name="email" placeholder="nhập email của bạn", required><!--bắt người dùng nhập đúng email,và hiện chữ mờ,bắt buộc-->
-    <textarea name="message" placeholder="hãy gửi cho mình những lời yêu thương của bạn"></textarea><!-- ô nhập nhiều dòng -->
-    <button type="submit">Gửi</button>

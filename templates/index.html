@@ -17,18 +17,18 @@
   {% endif %}<!-- nếu có biến ten thì không hiển thị -->
   <!--FORM BƯỚC 2 GỬI LỜI NHẮN CHỈ HIỆN SAU KHI NHẬP TÊN-->
       {% if ten %}<!-- nếu có biến ten thì hiển thị -->
-         <h3 >chào {{ ten }}!</h3>        
-         <h4>mày là một thằng chó</h4>
-         <form method="post"></form>
-         <input type ="hidden" name="ten" value="{{ ten }}"> <!-- giữ lại tên đã nhập để gửi đi -->
-         <p>JACK NÈ CON</p>
-         <label>email:</label><br>
-         <input type="email" name="email" required><br><br>
-            <label>HÃY THỞ RA NHỮNG CÂU TỪ YÊU THƯƠNG NHO:</label><br>
-            <textarea name="message" rows="4" cols="30" placeholder="nhập ở đây nò"></textarea><br><br>
-            <button type="submit">Gửi</button> <!-- gửi dữ liệu từ form về flask -->
-            {% endif %} <!-- nếu không có biến ten thì không hiển thị -->
-</form>
+ <h3 >chào {{ ten }}!</h3>        
+ <h4>mày là một thằng chó</h4>
+ <form method="post">
+ <input type ="hidden" name="ten" value="{{ ten }}"> <!-- giữ lại tên đã nhập để gửi đi -->
+ <p>JACK NÈ CON</p>
+ <label>email:</label><br>
+ <input type="email" name="email" required><br><br>
+    <label>HÃY THỞ RA NHỮNG CÂU TỪ YÊU THƯƠNG NHO:</label><br>
+    <textarea name="message" rows="4" cols="30" placeholder="nhập ở đây nò"></textarea><br><br>
+    <button type="submit">Gửi</button> <!-- gửi dữ liệu từ form về flask -->
+ </form>
+    {% endif %} <!-- nếu không có biến ten thì không hiển thị -->
 
     {% if email and message %}
 <h5>✅tin nhắn đã gửi</h5>   

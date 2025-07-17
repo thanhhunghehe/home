@@ -28,7 +28,7 @@
             <textarea name="message" rows="4" cols="30" placeholder="nhập ở đây nò"></textarea><br><br>
             <button type="submit">Gửi</button> <!-- gửi dữ liệu từ form về flask -->
 </form>
-    {% endif %}<!-- nếu không có biến ten thì không hiển thị -->
+
     {% if email and message %}
 <h5>✅tin nhắn đã gửi</h5>   
 <p><strong>Email:</strong> {{ email }}</p>
